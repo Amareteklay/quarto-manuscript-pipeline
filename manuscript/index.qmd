@@ -1,0 +1,20 @@
+<!-- File: index.qmd -->
+---
+# (Inherits front-matter from _quarto.yml; you can override per-document if needed)
+---
+
+# Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio
+vitae vestibulum vestibulum. As demonstrated previously in @doe2025, placeholder
+citations work seamlessly.
+
+# Methods
+
+## Data Loading
+
+```{python}
+import pandas as pd
+# TODO: replace with actual data path
+df = pd.read_csv("data/raw_data.csv")
+df.head()

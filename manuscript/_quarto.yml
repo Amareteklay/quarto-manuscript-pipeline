@@ -1,0 +1,26 @@
+project:
+  type: manuscript
+
+title: "Your Manuscript Title"
+author:
+  - name: "Amare Teklay Hailu"
+    affiliation: "1 Your Institute"
+affiliation:
+  - id: 1
+    institution: "Your Institute"
+    city: "Stockholm"
+    country: "Sweden"
+
+date: "2025-05-09"
+abstract: |
+  Replace this with your abstract (150–250 words).
+
+bibliography: references.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
+
+format:
+  html: default
+  pdf:
+    documentclass: article
+    template: default
+  docx: default
