@@ -1,0 +1,29 @@
+name: Build & Deploy Quarto Site
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  render-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          quarto-version: latest
+
+      - name: Render HTML
+        run: |
+          quarto render manuscript --to html
+          mv manuscript/_site _site
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: _site
+          publish_branch: gh-pages
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
